@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: payments
-          image: us.gcr.io/steady-dryad-338904/payments
+          image: spenserdavis/payments
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
