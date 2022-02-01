@@ -27,8 +27,8 @@ beforeEach(async () => {
 });
 
 afterAll(async () => {
+  await mongoose.connection.close(); //make sure mongoose closes before mongo server
   await mongo.stop();
-  await mongoose.connection.close();
 });
 
 global.signin = () => {

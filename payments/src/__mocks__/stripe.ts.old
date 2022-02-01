@@ -1,0 +1,8 @@
+//env var for stripe key is only accessible inside of k8s cluster; tests are currently being run on local machine
+//outside of the cluster so we dont have access to env var
+
+// export const stripe = {
+//   charges: {
+//     create: jest.fn().mockResolvedValue({}),
+//   },
+// };
