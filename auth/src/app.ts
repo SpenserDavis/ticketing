@@ -13,7 +13,11 @@ const app = express();
 app.set("trust proxy", true);
 app.use(json());
 app.use(
-  cookieSession({ signed: false, secure: process.env.NODE_ENV !== "test" })
+  cookieSession({
+    signed: false,
+    // secure: process.env.NODE_ENV !== "test"
+    secure: false, // enable switch these two in prod
+  })
 );
 app.use(currentUserRouter);
 app.use(signinRouter);
